@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>99Ways on GitHub: open-source tools for tracking and experimentation</title>
+  <meta name="description" content="99Ways builds reliable tracking, product analytics and experimentation systems. Open-source tools for PostHog page experiments and WooCommerce tracking, plus our field guides.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta property="og:title" content="99Ways on GitHub">
+  <meta property="og:description" content="Open-source tools and field guides for tracking, product analytics and experimentation.">
+  <meta property="og:image" content="https://99ways-io.github.io/assets/99ways-cover.png">
+  <meta property="og:url" content="https://99ways-io.github.io/">
+  <style>
+    :root {
+      --graphite: #292B2A; --warm: #F4F3EF; --muted: #676B65; --blue: #3558B8; --green: #147D40;
+      --bg: var(--warm); --text: var(--graphite); --sub: var(--muted); --link: var(--blue); --line: #DDDCD6; --card: #FFFFFF;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1F2120; --text: var(--warm); --sub: #B5B8B1; --link: #A6BAFF; --line: #3A3D3B; --card: #262827; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 20px 72px; }
+    a { color: var(--link); text-underline-offset: 3px; }
+    .logo { width: 220px; height: auto; display: block; }
+    .logo-dark { display: none; }
+    @media (prefers-color-scheme: dark) { .logo-light { display: none; } .logo-dark { display: block; } }
+    .tagline { margin: 18px 0 0; font-size: 1.25rem; font-weight: 600; }
+    .lede { color: var(--sub); margin: 10px 0 0; }
+    h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: .06em; color: var(--sub); margin: 56px 0 16px; font-weight: 600; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; margin: 0 0 14px; }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0 0 8px; }
+    .meta { color: var(--sub); font-size: .9rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    ul.guides { padding-left: 1.1em; margin: 0; }
+    ul.guides li { margin: 0 0 10px; }
+    .guide-note { color: var(--sub); }
+    .principles { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .95rem; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; white-space: pre-line; }
+    .cta { display: inline-block; margin-top: 8px; background: var(--green); color: #fff; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; }
+    footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--sub); font-size: .9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <img class="logo logo-light" src="assets/99ways-wordmark-light.svg" alt="99Ways" width="220" height="62">
+  <img class="logo logo-dark" src="assets/99ways-wordmark-dark.svg" alt="99Ways" width="220" height="62">
+  <p class="tagline">From tracking to experimentation to growth.</p>
+  <p class="lede">99Ways builds reliable tracking, product analytics and experimentation systems, so growth decisions run on repeatable, measurable evidence. We are a small team in Amsterdam, founded in 2023 by Iman Nazari and Moein Heshmati.</p>
+
+  <h2>How we work</h2>
+  <div class="principles">observe behavior before explaining it
+verify measurement before trusting it
+test the assumption that matters
+keep learning, especially when the variant loses</div>
+  <p>Most businesses can list many things that might improve. The harder problem is finding the few variables that actually matter. We use research to ask better questions, measurement to establish what is happening, experiments to change one important assumption at a time, and engineering to make the answer real.</p>
+
+  <h2>Open source</h2>
+  <div class="card">
+    <h3><a href="https://github.com/99ways-io/posthog-page-experiments">posthog-page-experiments</a></h3>
+    <p>Code-first page experiments for PostHog. It applies A/B and multivariate variants to existing pages, checks eligibility before recording an exposure, lets reviewers force a variant through the URL, and falls back safely when a flag is late or misconfigured. PostHog keeps assignment and analysis.</p>
+    <p class="meta">TypeScript · MIT · <a href="https://www.npmjs.com/package/@99ways/posthog-page-experiments">npm: @99ways/posthog-page-experiments</a></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/99ways-io/99hog">99hog</a></h3>
+    <p>A lean WordPress plugin that sends WooCommerce ecommerce events, such as product views, add-to-cart and purchases, to PostHog with a GA4-style event schema and per-event toggles.</p>
+    <p class="meta">PHP · WordPress / WooCommerce</p>
+  </div>
+  <p class="meta">These are independent community projects. They are not affiliated with or endorsed by PostHog.</p>
+
+  <h2>Field guides</h2>
+  <ul class="guides">
+    <li><a href="https://99ways.io/conversion-tracking-audit/">Conversion tracking audit</a> <span class="guide-note">– check event meaning, duplicates, identity and attribution before trusting funnel data.</span></li>
+    <li><a href="https://99ways.io/experimentation-system-audit/">Experimentation system audit</a> <span class="guide-note">– assignment, exposure, sample-ratio mismatch and inference, with a zero experiment to test the system itself.</span></li>
+    <li><a href="https://99ways.io/event-tracking-plan/">Event tracking plan</a> <span class="guide-note">– from business questions to events, identity, revenue and QA.</span></li>
+    <li><a href="https://99ways.io/how-much-traffic-for-ab-testing/">How much traffic an A/B test needs</a> <span class="guide-note">– sample size and test duration by baseline conversion rate and lift.</span></li>
+    <li><a href="https://99ways.io/how-to-setup-posthog-a-b-test-on-shopify/">PostHog A/B testing on Shopify</a> <span class="guide-note">– run storefront experiments with PostHog feature flags.</span></li>
+    <li><a href="https://99ways.io/growth-lever-analytics/">Growth Lever Analytics</a> <span class="guide-note">– connect business economics, measurement and experiments to find the change most likely to drive growth.</span></li>
+  </ul>
+  <p>More in the <a href="https://99ways.io/academy/">99Ways Academy</a>.</p>
+
+  <h2>Work with us</h2>
+  <p>We help teams build a trustworthy measurement foundation and turn it into a repeatable experimentation program.</p>
+  <a class="cta" href="https://99ways.io/contact/">Talk to 99Ways</a>
+
+  <footer>
+    <a href="https://99ways.io/">99ways.io</a> · <a href="https://github.com/99ways-io">GitHub</a> · <a href="https://www.linkedin.com/company/99ways-io/">LinkedIn</a><br>
+    99Ways is a brand of Nazari Ecom Solutions, Amsterdam, the Netherlands.
+  </footer>
+</main>
+</body>
+</html>
