@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>99Ways on GitHub: open-source tools for tracking and experimentation</title>
-  <meta name="description" content="99Ways builds reliable tracking, product analytics and experimentation systems. Open-source tools for PostHog page experiments and WooCommerce tracking, plus our field guides.">
+  <meta name="description" content="99Ways builds reliable tracking, product analytics and experimentation systems. Open-source tools for PostHog: 99Trace for WooCommerce orders and page experiments, plus our field guides.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <meta property="og:title" content="99Ways on GitHub">
   <meta property="og:description" content="Open-source tools and field guides for tracking, product analytics and experimentation.">
@@ -56,16 +56,16 @@ keep learning, especially when the variant loses</div>
 
   <h2>Open source</h2>
   <div class="card">
+    <h3><a href="https://99trace.com">99Trace</a></h3>
+    <p>Every WooCommerce order in PostHog, exactly once, on the visitor who placed it. A WordPress plugin whose server sends purchases, refunds and cancellations, so payment redirects, in-app browsers and ad blockers no longer lose orders, and posthog-js and the server share one visitor ID.</p>
+    <p class="meta">PHP · GPL-2.0-or-later · WordPress / WooCommerce · <a href="https://github.com/99ways-io/99trace-woocommerce-posthog">GitHub</a></p>
+  </div>
+  <div class="card">
     <h3><a href="https://github.com/99ways-io/posthog-page-experiments">posthog-page-experiments</a></h3>
     <p>Code-first page experiments for PostHog. It applies A/B and multivariate variants to existing pages, checks eligibility before recording an exposure, lets reviewers force a variant through the URL, and falls back safely when a flag is late or misconfigured. PostHog keeps assignment and analysis.</p>
     <p class="meta">TypeScript · MIT · <a href="https://www.npmjs.com/package/@99ways/posthog-page-experiments">npm: @99ways/posthog-page-experiments</a></p>
   </div>
-  <div class="card">
-    <h3><a href="https://github.com/99ways-io/99hog">99hog</a></h3>
-    <p>A lean WordPress plugin that sends WooCommerce ecommerce events, such as product views, add-to-cart and purchases, to PostHog with a GA4-style event schema and per-event toggles.</p>
-    <p class="meta">PHP · WordPress / WooCommerce</p>
-  </div>
-  <p class="meta">These are independent community projects. They are not affiliated with or endorsed by PostHog.</p>
+  <p class="meta">These are independent community projects. They are not affiliated with or endorsed by PostHog or WooCommerce.</p>
 
   <h2>Field guides</h2>
   <ul class="guides">
